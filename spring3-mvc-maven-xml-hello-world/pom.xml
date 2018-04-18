@@ -32,7 +32,7 @@
 	
 	
 	<!-- <build>
-test test
+test test f
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -55,8 +55,6 @@ test test
 					</webApp>
 				</configuration>
 			</plugin>
-  
-
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
