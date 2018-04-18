@@ -32,7 +32,7 @@
 	
 	
 	<!-- <build>
-test
+test test
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
