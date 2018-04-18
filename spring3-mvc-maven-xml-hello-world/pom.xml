@@ -29,8 +29,10 @@
 
 	</dependencies>
 
+	
+	
 	<!-- <build>
-
+test
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
