@@ -1,4 +1,4 @@
-package com.mkyong.web.controller;
+package com.slk.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
