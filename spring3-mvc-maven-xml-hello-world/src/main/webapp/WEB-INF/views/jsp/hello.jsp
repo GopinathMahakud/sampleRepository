@@ -39,7 +39,7 @@
  
 <div class="container">
  
-  <div class="row" style="background-color:black;">
+  <div class="row" style="background-color:#a0a59f;">
 	<div class="col-md-4">
 		<h2>Deposit</h2>
 		
