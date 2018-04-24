@@ -48,7 +48,7 @@
 		</p>
 	</div>
 	<div class="col-md-4">
-		<h2>Withdrawl</h2>
+		<h2>Withdrawal</h2>
 
 		<p>
 			<!-- <a class="btn btn-default" href="#" role="button">View details</a> -->
