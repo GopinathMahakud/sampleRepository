@@ -21,7 +21,7 @@
  
 <div class="jumbotron">
   <div class="container">
-	<h1>${title} Teller Transaction </h1>
+	<h1>${msg} Teller Transaction </h1>
 	<p>
 		<%-- <c:if test="${not empty name}">
 			Hello ${name}
@@ -39,7 +39,7 @@
  
 <div class="container">
  
-  <div class="row">
+  <div class="row" style="background-color:black;">
 	<div class="col-md-4">
 		<h2>Deposit</h2>
 		
