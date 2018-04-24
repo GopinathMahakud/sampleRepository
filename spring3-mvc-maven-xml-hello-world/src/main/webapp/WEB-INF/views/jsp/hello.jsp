@@ -14,25 +14,25 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">Spring 3 MVC Project test</a>
+		<a class="navbar-brand" href="#">Fifth Third Bank</a>
 	</div>
   </div>
 </nav>
  
 <div class="jumbotron">
   <div class="container">
-	<h1>${title} Test11112 </h1>
+	<h1>${title} Teller Transaction </h1>
 	<p>
-		<c:if test="${not empty name}">
+		<%-- <c:if test="${not empty name}">
 			Hello ${name}
 		</c:if>
  
 		<c:if test="${empty name}">
 			Welcome Welcome!
-		</c:if>
+		</c:if> --%>
     </p>
     <p>
-		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+		<!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
 	</p>
 	</div>
 </div>
@@ -41,24 +41,24 @@
  
   <div class="row">
 	<div class="col-md-4">
-		<h2>Heading</h2>
-		<p>ABC</p>
+		<h2>Deposit</h2>
+		
 		<p>
-			<a class="btn btn-default" href="#" role="button">View details</a>
+			<!-- <a class="btn btn-default" href="#" role="button">View details</a> -->
 		</p>
 	</div>
 	<div class="col-md-4">
-		<h2>Heading</h2>
-		<p>ABC</p>
+		<h2>Withdrawl</h2>
+
 		<p>
-			<a class="btn btn-default" href="#" role="button">View details</a>
+			<!-- <a class="btn btn-default" href="#" role="button">View details</a> -->
 		</p>
 	</div>
 	<div class="col-md-4">
-		<h2>Heading</h2>
-		<p>ABC</p>
+		<h2>Scan Cheque</h2>
+
 		<p>
-			<a class="btn btn-default" href="#" role="button">View details</a>
+			<!-- <a class="btn btn-default" href="#" role="button">View details</a> -->
 		</p>
 	</div>
   </div>
