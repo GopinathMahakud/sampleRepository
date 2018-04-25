@@ -65,7 +65,7 @@
  
  
   <hr>
- 
+ <footer><p>&copy; 53Bank.com</p></footer>
 </div>
  
 <spring:url value="/resources/core/css/hello.js" var="coreJs" />
