@@ -11,9 +11,20 @@
 		<jdk.version>1.6</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
+		<cargo.version>1.4.8</cargo.version>
+		<jboss.version>7.1.0.Final</jboss.version>
+		<jboss.remoting.version>3.3.1.Final</jboss.remoting.version>
 	</properties>
 
+
 	<dependencies>
+
+		<dependency>
+		    <groupId>org.wildfly.plugins</groupId>
+		    <artifactId>wildfly-maven-plugin</artifactId>
+		    <version>1.2.1.Final</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -27,48 +38,75 @@
 			<version>${jstl.version}</version>
 		</dependency>
 
+	<dependency>
+			<groupId>org.codehaus.cargo</groupId>
+			<artifactId>cargo-core-container-jboss</artifactId>
+			<version>${cargo.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jboss.as</groupId>
+			<artifactId>jboss-as-controller-client</artifactId>
+			<version>${jboss.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.remoting3</groupId>
+			<artifactId>jboss-remoting</artifactId>
+			<version>${jboss.remoting.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.jboss.xnio</groupId>
+					<artifactId>xnio-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
 	</dependencies>
 
-	
+<build>
+	<plugins>
+		<plugin>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-maven-plugin</artifactId>
+            <version>1.2.1.Final</version>
+         </plugin>
+	</plugins>
+</build>
+
 	
 	<!-- <build>
-test test f
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
+	<plugins>
+	 <plugin>
+  <groupId>org.codehaus.cargo</groupId>
+  <artifactId>cargo-maven2-plugin</artifactId>
+  <version>1.2.0</version>
+  <configuration>
+    <container>
+      <containerId>jboss51x</containerId>
+      <home>E:\jboss-5.1.0.GA</home>
+       <timeout>600000</timeout>
+        <append>false</append>
+    </container>
+    <configuration>
+      <type>existing</type>
+      <home>E:\jboss-5.1.0.GA\server\default</home>
+      <properties>
+       <cargo.servlet.port>8090</cargo.servlet.port>
+       <cargo.jboss.configuration>default</cargo.jboss.configuration>
+        <cargo.hostname>localhost</cargo.hostname>
+        <cargo.rmi.port>1099</cargo.rmi.port>
+      </properties>
+    </configuration>
+  </configuration>
 
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.11.v20150529</version>
-				<configuration>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<webApp>
-						<contextPath>/spring3</contextPath>
-					</webApp>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>spring3</wtpContextName>
-				</configuration>
-			</plugin>
-			
-		</plugins>
-	</build>
- -->
+  </plugin>
+	</plugins>
+	</build> -->
+	
 </project>
