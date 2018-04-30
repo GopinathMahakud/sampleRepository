@@ -5,27 +5,19 @@
 	<artifactId>spring3-mvc-maven-xml-hello-world</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>spring3 mvc maven</name>
+	<name>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT</name>
 
 	<properties>
 		<jdk.version>1.6</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
-		<cargo.version>1.4.8</cargo.version>
-		<jboss.version>7.1.0.Final</jboss.version>
-		<jboss.remoting.version>3.3.1.Final</jboss.remoting.version>
+		<hostName>localhost</hostName>
+		<jbossUser>admin</jbossUser>
+  		<jbossPass>admin</jbossPass>
+  		<warName>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT</warName>
 	</properties>
 
-
 	<dependencies>
-
-		<dependency>
-		    <groupId>org.wildfly.plugins</groupId>
-		    <artifactId>wildfly-maven-plugin</artifactId>
-		    <version>1.0.2.Final</version>
-		</dependency>
-
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -37,84 +29,39 @@
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
 		</dependency>
-
-	<dependency>
-			<groupId>org.codehaus.cargo</groupId>
-			<artifactId>cargo-core-container-jboss</artifactId>
-			<version>${cargo.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 		
 		<dependency>
-			<groupId>org.jboss.as</groupId>
-			<artifactId>jboss-as-controller-client</artifactId>
-			<version>${jboss.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.remoting3</groupId>
-			<artifactId>jboss-remoting</artifactId>
-			<version>${jboss.remoting.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.jboss.xnio</groupId>
-					<artifactId>xnio-api</artifactId>
-				</exclusion>
-			</exclusions>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.9</version>
 		</dependency>
 		
 	</dependencies>
-
-<build>
-	<plugins>
-		<!-- <plugin>
-            <groupId>org.wildfly.plugins</groupId>
-            <artifactId>wildfly-maven-plugin</artifactId>
-            <version>1.0.2.Final</version>
-         </plugin> -->
-         
-    <plugin>
-      <groupId>org.jboss.as.plugins</groupId>
-      <artifactId>jboss-as-maven-plugin</artifactId>
-      <version>6.3.Final</version>
-    </plugin>
-  
-         
-	</plugins>
+	
+	<build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.6</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.jboss.as.plugins</groupId>
+            <artifactId>jboss-as-maven-plugin</artifactId>
+            <version>7.4.Final</version>
+            <configuration>
+                <force>true</force>
+                <hostname>${hostName}</hostname>
+                <username>${jbossUser}</username>
+                <password>${jbossPass}</password>
+                <port>8086</port>
+                <filename>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war</filename>
+                <name>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war</name>
+            </configuration>
+        </plugin>
+    </plugins>
 </build>
 
-	
-	<!-- <build>
-	<plugins>
-	 <plugin>
-  <groupId>org.codehaus.cargo</groupId>
-  <artifactId>cargo-maven2-plugin</artifactId>
-  <version>1.2.0</version>
-  <configuration>
-    <container>
-      <containerId>jboss51x</containerId>
-      <home>E:\jboss-5.1.0.GA</home>
-       <timeout>600000</timeout>
-        <append>false</append>
-    </container>
-    <configuration>
-      <type>existing</type>
-      <home>E:\jboss-5.1.0.GA\server\default</home>
-      <properties>
-       <cargo.servlet.port>8090</cargo.servlet.port>
-       <cargo.jboss.configuration>default</cargo.jboss.configuration>
-        <cargo.hostname>localhost</cargo.hostname>
-        <cargo.rmi.port>1099</cargo.rmi.port>
-      </properties>
-    </configuration>
-  </configuration>
-
-  </plugin>
-	</plugins>
-	</build> -->
-	
 </project>
