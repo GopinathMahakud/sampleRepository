@@ -11,7 +11,7 @@
 		<jdk.version>1.6</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
-		<hostName>10.41.14.172</hostName>
+		<hostName>127.0.0.1</hostName>
 		<jbossUser>admin</jbossUser>
   		<jbossPass>admin@123</jbossPass>
   		<warName>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT</warName>
@@ -62,19 +62,19 @@
             </configuration>
         </plugin> -->
         
-         <plugin>
+       <!--   <plugin>
         <groupId>org.jboss.as.plugins</groupId>
         <artifactId>jboss-as-maven-plugin</artifactId>
         <version>7.4.Final</version>
         <configuration>
             <hostname>${hostName}</hostname>
-            <port>8086</port>
+            <port>1099</port>
             <username>${jbossUser}</username>
             <password>${jbossPass}</password>
             <name>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT</name>
             <filename>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war</filename>
         </configuration>
-        <!-- <executions>
+         <executions>
             <execution>
                 <id>deploy-war</id>
                 <phase>install</phase>
@@ -82,8 +82,8 @@
                     <goal>deploy</goal>
                 </goals>
             </execution>
-        </executions> -->
-    </plugin> 
+        </executions> 
+    </plugin>  -->
         
     </plugins>
 </build>
