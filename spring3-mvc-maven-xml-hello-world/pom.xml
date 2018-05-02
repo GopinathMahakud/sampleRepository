@@ -74,15 +74,15 @@
             <name>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT</name>
             <filename>spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war</filename>
         </configuration>
-        <executions>
+        <!-- <executions>
             <execution>
-                <id>deploy-jar</id>
+                <id>deploy-war</id>
                 <phase>install</phase>
                 <goals>
                     <goal>deploy</goal>
                 </goals>
             </execution>
-        </executions>
+        </executions> -->
     </plugin> 
         
     </plugins>
