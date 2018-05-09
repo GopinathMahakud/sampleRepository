@@ -55,7 +55,7 @@
 		</p>
 	</div>
 	<div class="col-md-4">
-		<h2>Scan</h2>
+		<h2>Search</h2>
 
 		<p>
 			<!-- <a class="btn btn-default" href="#" role="button">View details</a> -->
