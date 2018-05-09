@@ -41,7 +41,7 @@
  
   <div class="row" style="background-color:#a0a59f;">
 	<div class="col-md-4">
-		<h2>Deposit</h2>
+		<h2>Deposits</h2>
 		
 		<p>
 			<!-- <a class="btn btn-default" href="#" role="button">View details</a> -->
