@@ -21,7 +21,7 @@
  
 <div class="jumbotron">
   <div class="container">
-	<h1>${msg} Teller Transaction </h1>
+	<h1>${msg} Welcome to a Sample Web Application </h1>
 	<p>
 		<%-- <c:if test="${not empty name}">
 			Hello ${name}
